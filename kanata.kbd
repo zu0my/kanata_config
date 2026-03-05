@@ -1,0 +1,152 @@
+(defcfg
+  process-unmapped-keys (all-except f19)
+
+  concurrent-tap-hold yes
+
+  rapid-event-delay 5
+
+  override-release-on-activation yes
+
+  danger-enable-cmd yes
+)
+
+(deflocalkeys-win
+  ì 187
+)
+
+(deflocalkeys-wintercept
+  ì 187
+)
+
+(deflocalkeys-winiov2
+  ì 187
+)
+
+(deflocalkeys-linux
+  ì 13
+)
+
+(deflocalkeys-macos
+  ì 13
+)
+
+(defsrc
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc ;; 14
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \    ;; 14
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret       ;; 13
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft           ;; 12
+  lctl lmet lalt           spc            ralt rmet rctl                ;; 7
+)
+
+(defalias
+  to_col   (layer-switch colemak)
+  to_qwe   (layer-switch qwerty)
+  pause (layer-switch passthrough)
+  unpause (layer-switch colemak)
+  to_mouse (layer-switch mouse)
+
+  caps_mod (layer-while-held fn)
+
+  mu (movemouse-accel-up    10 2000 1 100)
+  md (movemouse-accel-down  10 2000 1 100)
+  ml (movemouse-accel-left  10 2000 1 100)
+  mr (movemouse-accel-right 10 2000 1 100)
+
+  wu (mwheel-up    50 72)
+  wd (mwheel-down  50 72)
+
+  m1 mlft
+  m2 mrgt
+  m3 mmid
+
+  rec (dynamic-macro-record 0)
+  ply (dynamic-macro-play 0)
+
+  win_to_left M-left
+  win_to_right M-right
+  win_to_up M-up
+  win_to_down M-down
+
+  toggle_volume (cmd nircmd mutesysvolume 2)
+
+  h1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 1")
+  s1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 1")
+
+  h2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 2")
+  s2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 2")
+
+  h3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 3")
+  s3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 3")
+
+  h4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 4")
+  s4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 4")
+
+  h5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 5")
+  s5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 5")
+
+  h6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 6")
+  s6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 6")
+
+  h7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 7")
+  s7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 7")
+
+  h8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 8")
+  s8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 8")
+
+  h9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 9")
+  s9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 9")
+
+  show_all (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 0")
+)
+
+(defchordsv2
+  (spc 1) @s1 300 all-released (colemak qwerty mouse passthrough)
+  (spc 2) @s2 300 all-released (colemak qwerty mouse passthrough)
+  (spc 3) @s3 300 all-released (colemak qwerty mouse passthrough)
+  (spc 4) @s4 300 all-released (colemak qwerty mouse passthrough)
+  (spc 5) @s5 300 all-released (colemak qwerty mouse passthrough)
+  (spc 6) @s6 300 all-released (colemak qwerty mouse passthrough)
+  (spc 7) @s7 300 all-released (colemak qwerty mouse passthrough)
+  (spc 8) @s8 300 all-released (colemak qwerty mouse passthrough)
+  (spc 9) @s9 300 all-released (colemak qwerty mouse passthrough)
+)
+
+(deflayer colemak
+  esc        1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab        q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @caps_mod  a    r    s    t    d    h    n    e    i    o    '    ret
+  lsft       z    x    c    v    b    k    m    ,    .    /    rsft
+  lctl       lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer qwerty
+  esc        1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab        q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @caps_mod  a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft       z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl       lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer fn
+  @pause   @h1    @h2    @h3              @h4        @h5    @h6      @h7                 @h8      @h9      @show_all   XX    XX    XX
+  grv      f1     f2     f3               f4         XX     XX       pgup                up       pgdn     XX          XX    XX    XX
+  XX       f5     f6     f7               f8         XX     home     left                down     right    end         XX    XX
+  _        f9     f10    f11              f12        @rec   @ply     @toggle_volume      XX       XX       XX    @to_mouse
+  _        _      _                            lrld                         @to_col  _        @to_qwe
+)
+
+(deflayer mouse
+  @pause      XX     XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  _           XX     XX    XX    XX    XX    XX    @wu   @mu   @wd   XX    XX    XX    XX
+  @caps_mod   mbck   @m1   @m3   @m2   mfwd  XX    @ml   @md   @mr   XX    XX    XX
+  _           XX     XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  _           _      _            _               @to_col     _     @to_qwe
+)
+
+(deflayer passthrough
+  esc     1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps    a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft    z    x    c    v    b    n    m    ,    .    /    @to_mouse
+  lctl    lmet lalt           spc            @unpause  rmet @to_qwe
+)
