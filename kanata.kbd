@@ -52,8 +52,10 @@
   ml (movemouse-accel-left  10 2000 1 100)
   mr (movemouse-accel-right 10 2000 1 100)
 
-  wu (mwheel-up    50 72)
-  wd (mwheel-down  50 72)
+  wu (mwheel-up     50 120)
+  wd (mwheel-down   50 120)
+  wl (mwheel-left   50 120)
+  wr (mwheel-right  50 120)
 
   m1 mlft
   m2 mrgt
@@ -67,36 +69,40 @@
   win_to_up M-up
   win_to_down M-down
 
-  toggle_volume (cmd nircmd mutesysvolume 2)
+  vu volu  ;; Volume Up
+  vd vold  ;; Volume Down
+  mt mute  ;; Mute
 
-  h1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 1")
-  s1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 1")
+  toggle_alt_tab_status (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\set_alt_tab_status.exe")
 
-  h2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 2")
-  s2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 2")
+  h1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 1")
+  s1 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 1")
 
-  h3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 3")
-  s3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 3")
+  h2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 2")
+  s2 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 2")
 
-  h4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 4")
-  s4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 4")
+  h3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 3")
+  s3 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 3")
 
-  h5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 5")
-  s5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 5")
+  h4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 4")
+  s4 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 4")
 
-  h6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 6")
-  s6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 6")
+  h5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 5")
+  s5 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 5")
 
-  h7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 7")
-  s7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 7")
+  h6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 6")
+  s6 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 6")
 
-  h8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 8")
-  s8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 8")
+  h7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 7")
+  s7 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 7")
 
-  h9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 9")
-  s9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 9")
+  h8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 8")
+  s8 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 8")
 
-  show_all (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 0")
+  h9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat hide 9")
+  s9 (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 9")
+
+  show_all (cmd nircmd.exe exec hide cmd.exe /c "C:\Users\27242\software\kanata-windows-binaries-x64-v1.10.1\tools\win_manager.bat show 0")
 )
 
 (defchordsv2
@@ -109,6 +115,9 @@
   (spc 7) @s7 300 all-released (colemak qwerty mouse passthrough)
   (spc 8) @s8 300 all-released (colemak qwerty mouse passthrough)
   (spc 9) @s9 300 all-released (colemak qwerty mouse passthrough)
+
+  (lctrl o) (mwheel-accel-down 3 200 2 0.93) 300 first-release (colemak qwerty fn passthrough)
+  (lctrl u) (mwheel-accel-up 3 200 2 0.93) 300 first-release (colemak qwerty fn passthrough)
 )
 
 (deflayer colemak
@@ -128,25 +137,25 @@
 )
 
 (deflayer fn
-  @pause   @h1    @h2    @h3              @h4        @h5    @h6      @h7                 @h8      @h9      @show_all   XX    XX    XX
-  grv      f1     f2     f3               f4         XX     XX       pgup                up       pgdn     XX          XX    XX    XX
-  XX       f5     f6     f7               f8         XX     home     left                down     right    end         XX    XX
-  _        f9     f10    f11              f12        @rec   @ply     @toggle_volume      XX       XX       XX    @to_mouse
-  _        _      _                            lrld                         @to_col  _        @to_qwe
+  @pause  @h1    @h2    @h3     @h4     @h5    @h6      @h7      @h8      @h9      @show_all   @vd    @vu    del
+  grv     f1     f2     f3      f4      @toggle_alt_tab_status     XX       pgup     up       pgdn     XX          XX     XX    XX
+  XX      f5     f6     f7      f8      XX     home     left     down     right    end         XX     XX
+  _       f9     f10    f11     f12     @rec   @ply     @mt      XX       XX       XX          @to_mouse
+  _       _      _                       lrld                       @to_col  _           @to_qwe
 )
 
 (deflayer mouse
-  @pause      XX     XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
-  _           XX     XX    XX    XX    XX    XX    @wu   @mu   @wd   XX    XX    XX    XX
+  _           XX     XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    _
+  _           XX     _     XX    XX    XX    @wl   @wu   @mu   @wd   @wr   XX    XX    XX
   @caps_mod   mbck   @m1   @m3   @m2   mfwd  XX    @ml   @md   @mr   XX    XX    XX
-  _           XX     XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
-  _           _      _            _               @to_col     _     @to_qwe
+  _           left   up    down  right XX    XX    XX    XX    XX    XX    XX
+  _           _      _             XX              @to_col     XX    @to_qwe
 )
 
 (deflayer passthrough
-  esc     1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps    a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft    z    x    c    v    b    n    m    ,    .    /    @to_mouse
-  lctl    lmet lalt           spc            @unpause  rmet @to_qwe
+  esc          1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab          q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps         a    s    d    f    g    h    j    k    l    ;    '    ret
+  @to_mouse    z    x    c    v    b    n    m    ,    .    /    @to_mouse
+  lctrl        lmet lalt           spc            @unpause  rmet @to_qwe
 )
